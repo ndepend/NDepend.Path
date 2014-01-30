@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3736F44D-F747-4333-97B6-98064CDF89C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NDepend.Path</RootNamespace>
+    <AssemblyName>NDepend.Path</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsInferRequires>False</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>NDepend.Path.Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=736440c9b414ea16, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\Microsoft.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NDepend.Helpers\ExtensionMethodsEnumerable.cs" />
+    <Compile Include="NDepend.Helpers\ExtensionMethodsSet.cs" />
+    <Compile Include="NDepend.Helpers\ExtensionMethodsString.cs" />
+    <Compile Include="NDepend.Helpers\IReadOnlyCollection.cs" />
+    <Compile Include="NDepend.Helpers\IReadOnlyList.cs" />
+    <Compile Include="NDepend.Path\AbsolutePathKind.cs" />
+    <Compile Include="NDepend.Path\EnvVarPathResolvingStatus.cs" />
+    <Compile Include="NDepend.Path\ExtensionMethodsOnPathsCollection.cs" />
+    <Compile Include="NDepend.Path\IAbsoluteDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\IAbsoluteFilePath.cs" />
+    <Compile Include="NDepend.Path\IAbsolutePath.cs" />
+    <Compile Include="NDepend.Path\IDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\IDriveLetter.cs" />
+    <Compile Include="NDepend.Path\IEnvVarDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\IEnvVarFilePath.cs" />
+    <Compile Include="NDepend.Path\IEnvVarPath.cs" />
+    <Compile Include="NDepend.Path\IFilePath.cs" />
+    <Compile Include="NDepend.Path\IPath.cs" />
+    <Compile Include="NDepend.Path\IRelativeDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\IRelativeFilePath.cs" />
+    <Compile Include="NDepend.Path\IRelativePath.cs" />
+    <Compile Include="NDepend.Path\IVariableDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\IVariableFilePath.cs" />
+    <Compile Include="NDepend.Path\IVariablePath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+AbsoluteDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+AbsoluteFilePath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+AbsolutePathBase.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+AbsoluteRelativePathHelpers.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+DriveLetter.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+EnvVarDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+EnvVarFilePath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+EnvVarPathBase.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+FilePathHelpers.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+MiscHelpers.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+PathBase.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+PathBrowsingHelpers.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+RelativeDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+RelativeFilePath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+RelativePathBase.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+UNCPathHelper.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+VariableDirectoryPath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+VariableFilePath.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+VariablePathBase.cs" />
+    <Compile Include="NDepend.Path\PathHelpers+VariablePathHelpers.cs" />
+    <Compile Include="NDepend.Path\PathHelpers.cs" />
+    <Compile Include="NDepend.Path\PathMode.cs" />
+    <Compile Include="NDepend.Path\VariablePathResolvingStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NDepend.Path.Key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

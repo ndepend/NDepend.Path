@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDepend.Path", "NDepend.Path\NDepend.Path.csproj", "{3736F44D-F747-4333-97B6-98064CDF89C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDepend.Path.Tests", "NDepend.Path.Tests\NDepend.Path.Tests.csproj", "{55BF97DF-6D0B-4911-8305-BB1D2211B8C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3736F44D-F747-4333-97B6-98064CDF89C7} = {3736F44D-F747-4333-97B6-98064CDF89C7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3736F44D-F747-4333-97B6-98064CDF89C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3736F44D-F747-4333-97B6-98064CDF89C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3736F44D-F747-4333-97B6-98064CDF89C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3736F44D-F747-4333-97B6-98064CDF89C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55BF97DF-6D0B-4911-8305-BB1D2211B8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BF97DF-6D0B-4911-8305-BB1D2211B8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BF97DF-6D0B-4911-8305-BB1D2211B8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BF97DF-6D0B-4911-8305-BB1D2211B8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NDepend) = preSolution
+		Project = ""
+	EndGlobalSection
+EndGlobal
