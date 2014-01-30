@@ -1,10 +1,8 @@
 NDepend.Path
 ============
 
-A OO framework to handle all sorts of paths: File, Directory, Absolute, Drive Letter, UNC, Relative, prefixed with an Environment Variable, that contain Variable...
 
-
-//
+         //
          // Support for absolute file and directory path, drive letter and absolute
          //
          var absoluteFilePath = @"C:\Dir\File.txt".ToAbsoluteFilePath();
