@@ -110,3 +110,4 @@ UpgradeLog*.XML
 /NDepend.Path/obj
 /NDepend.Path.Tests/obj
 /NDepend.Path.sln.ide
+/*.nupkg
