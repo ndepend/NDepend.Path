@@ -1,5 +1,0 @@
-C:\NDepend\Proto\NDepend.Path\bin\Debug\NDepend.Path.Tests.dll
-C:\NDepend\Proto\NDepend.Path\bin\Debug\NDepend.Path.Tests.pdb
-C:\NDepend\Proto\NDepend.Path\NDepend.Path.Tests\obj\Debug\NDepend.Path.Tests.dll
-C:\NDepend\Proto\NDepend.Path\NDepend.Path.Tests\obj\Debug\NDepend.Path.Tests.pdb
-C:\NDepend\Proto\NDepend.Path\NDepend.Path.Tests\obj\Debug\NDepend.Path.Tests.csprojResolveAssemblyReference.cache
