@@ -59,11 +59,11 @@ namespace NDepend.Path {
             var parentDirectoryString = parentDirectory.ToString();
 
             // Don't accept equals pathString!
-            var pathStringLength = parentDirectoryString.Length;
-            if (m_PathString.Length <= pathStringLength) { return false; }
+            var parentDirectoryStringLength = parentDirectoryString.Length;
+            if (m_PathString.Length <= parentDirectoryStringLength) { return false; }
 
-            // Possible since at this point (pathStringLength > parentDirectoryString.Length)
-            var c = m_PathString[pathStringLength];
+            // Possible since at this point (m_PathString.Length > parentDirectoryStringLength)
+            var c = m_PathString[parentDirectoryStringLength];
 
             // Need to check that char at pos pathStringLength is a separator, 
             // else @"D:/Foo bar" is considered as a child of @"D:/Foo".

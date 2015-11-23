@@ -684,6 +684,7 @@ namespace NDepend.Path {
       [TestCase(@"C:\Dir1\Dir2\Dir3", @"c:", true)]
       [TestCase(@"\\server\SHARE\Dir2\Dir3", @"\\SERVER\\share\dir2\", true)]
       [TestCase(@".\Dir2\Dir3", @".\dir2\", true)]
+      [TestCase(@"D:/Foo/bar", @"D:/Foo", true)]
 
 
       [TestCase(@"C:\Dir1\Dir2\Dir3", @"E:", false)]
