@@ -684,13 +684,16 @@ namespace NDepend.Path {
       [TestCase(@"C:\Dir1\Dir2\Dir3", @"c:", true)]
       [TestCase(@"\\server\SHARE\Dir2\Dir3", @"\\SERVER\\share\dir2\", true)]
       [TestCase(@".\Dir2\Dir3", @".\dir2\", true)]
-      
+
+
       [TestCase(@"C:\Dir1\Dir2\Dir3", @"E:", false)]
       [TestCase(@"C:\Dir1\Dir2\Dir3", @"C:\Dir2", false)]
       [TestCase(@"C:\Dir2\", @"C:\Dir2", false)]
       [TestCase(@"\\serverA\SHARE\Dir2\Dir3", @"\\SERVERB\\share\dir2\", false)]
       [TestCase(@"\\server\SHARE\Dir2\Dir3", @"\\SERVER\\share\dir2\dir3", false)]
-      
+      [TestCase(@"D:/Foo bar", @"D:/Foo", false)]
+      [TestCase(@"D:/Foobar", @"D:/Foo", false)]
+
       public void Test_IsChildDirectoryOf(string pathChildString, string pathParentString, bool isChildOf) {
          var pathChild = pathChildString.ToDirectoryPath();
          var pathParent = pathParentString.ToDirectoryPath();
