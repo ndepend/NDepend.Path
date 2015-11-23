@@ -56,22 +56,10 @@ namespace NDepend.Path {
 
          public bool IsChildOf(IDirectoryPath parentDirectory) {
             Debug.Assert(parentDirectory != null);
-            var parentDirectoryString = parentDirectory.ToString();
-
-            // Don't accept equals pathString!
-            var pathStringLength = parentDirectoryString.Length;
-            if (m_PathString.Length <= pathStringLength) { return false; }
-
-            // Possible since at this point (pathStringLength > parentDirectoryString.Length)
-            var c = m_PathString[pathStringLength];
-
-            // Need to check that char at pos pathStringLength is a separator, 
-            // else @"D:/Foo bar" is considered as a child of @"D:/Foo".
-            // Note that m_PathString is normalized in ctor, hence its separator(s) are DIR_SEPARATOR_CHAR.
-            if (c != MiscHelpers.DIR_SEPARATOR_CHAR) { return false; }
-
             string parentPathLowerCase = parentDirectory.ToString().ToLower();
             string thisPathLowerCase = m_PathString.ToLower();
+            // Don't accept equals pathString!
+            if (thisPathLowerCase.Length <= parentPathLowerCase.Length) { return false; }
             return thisPathLowerCase.IndexOf(parentPathLowerCase) == 0;
          }
 
