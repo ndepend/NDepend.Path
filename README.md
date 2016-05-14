@@ -2,6 +2,7 @@ NDepend.Path
 ============
 
 
+````csharp
          //
          // Support for absolute file and directory path, drive letter and absolute
          //
@@ -140,3 +141,4 @@ NDepend.Path
          Assert.IsTrue(@"\\Server\Share\Dir".IsValidFilePath());
          Assert.IsTrue(@"C:\Dir".IsValidDirectoryPath());
          Assert.IsTrue(@"\\Server\Share\Dir".IsValidDirectoryPath());
+````
